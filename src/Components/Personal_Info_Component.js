@@ -1,8 +1,8 @@
 import { Avatar, Button, Divider, Paper, Snackbar } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import "../Styles_Css/Personal_Info_Component.css";
-import BackNextBtnComponent from "./Back_NextBtn_Component";
-import InputComponent from "./Input_Component";
+import Back_NextBtn_Component from "./Back_NextBtn_Component";
+import Input_Component from "./Input_Component";
 import { connect } from "react-redux";
 import Avatar1 from "react-avatar-edit";
 import { styled } from "@mui/material/styles";
@@ -37,8 +37,8 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 const Personal_Info_Component = (props) => {
   const [loading, setLoading] = useState(false);
   const [imgSnackbar, setImgSnackbar] = useState(false);
-  const [vertical] = useState("top");
-  const [horizontal] = useState("center");
+  const [vertical, setVertical] = useState("top");
+  const [horizontal, setHorizontal] = useState("center");
 
   const {
     register,
@@ -49,7 +49,7 @@ const Personal_Info_Component = (props) => {
   const [img, setImg] = useState(
     props.personalInfo.profileImg.length ? props.personalInfo.profileImg : ""
   );
-  const [ setSotreImage] = useState([]);
+  const [sotreImage, setSotreImage] = useState([]);
 
   const [open, setOpen] = useState(false);
 
@@ -188,7 +188,7 @@ const Personal_Info_Component = (props) => {
 
       <form onSubmit={handleSubmit(handleNext)}>
         <div className="personal-info-form-fields">
-          <InputComponent
+          <Input_Component
             title={"First Name"}
             type={"text"}
             name={"firstName"}
@@ -205,7 +205,7 @@ const Personal_Info_Component = (props) => {
             errorMessage={errors.firstName ? errors.firstName.message : null}
           />
 
-          <InputComponent
+          <Input_Component
             title={"Last Name"}
             type={"text"}
             name={"lastName"}
@@ -222,7 +222,7 @@ const Personal_Info_Component = (props) => {
             errorMessage={errors.lastName ? errors.lastName.message : null}
           />
 
-          <InputComponent
+          <Input_Component
             title={"Email"}
             type={"email"}
             name={"email"}
@@ -239,7 +239,7 @@ const Personal_Info_Component = (props) => {
             error={errors.email ? true : false}
             errorMessage={errors.email ? errors.email.message : null}
           />
-          <InputComponent
+          <Input_Component
             title={"Mobile"}
             type={"number"}
             name={"mobile"}
@@ -257,7 +257,7 @@ const Personal_Info_Component = (props) => {
           />
 
         </div>
-        <InputComponent
+        <Input_Component
           title={"Address"}
           type={"text"}
           name={"address"}
@@ -275,7 +275,7 @@ const Personal_Info_Component = (props) => {
           errorMessage={errors.address ? errors.address.message : null}
         />
         <div style={{ marginTop: 20 }} className="personal-info-form-fields">
-          <InputComponent
+          <Input_Component
             title={"City"}
             type={"text"}
             name={"city"}
@@ -292,7 +292,7 @@ const Personal_Info_Component = (props) => {
             error={errors.city ? true : false}
             errorMessage={errors.city ? errors.city.message : null}
           />
-          <InputComponent
+          <Input_Component
             title={"State"}
             type={"text"}
             name={"state"}
@@ -309,7 +309,7 @@ const Personal_Info_Component = (props) => {
             errorMessage={errors.state ? errors.state.message : null}
           />
 
-          <InputComponent
+          <Input_Component
             title={"Postal Code"}
             type={"number"}
             name={"postalCode"}
@@ -327,7 +327,7 @@ const Personal_Info_Component = (props) => {
           />
         </div>
 
-        <InputComponent
+        <Input_Component
           title={"Objective"}
           type={"text"}
           name={"objective"}
@@ -346,7 +346,7 @@ const Personal_Info_Component = (props) => {
         />
 
         <Divider className="personal-details-divider" />
-        <BackNextBtnComponent
+        <Back_NextBtn_Component
           // =========onNext={() => handleSubmit(handleNext)}=======
           loading={loading}
           tab={props.tab}
