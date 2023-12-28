@@ -2,7 +2,7 @@ import { Avatar, Button, Divider, Paper, Snackbar } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import "../Styles_Css/Personal_Info_Component.css";
 import Back_NextBtn_Component from "./Back_NextBtn_Component";
-import Input_Component from "./Input_Component";
+import INPUT_COMPONENT from "./Input_Component";
 import { connect } from "react-redux";
 import Avatar1 from "react-avatar-edit";
 import { styled } from "@mui/material/styles";
@@ -188,7 +188,7 @@ const Personal_Info_Component = (props) => {
 
       <form onSubmit={handleSubmit(handleNext)}>
         <div className="personal-info-form-fields">
-          <Input_Component
+          <INPUT_COMPONENT
             title={"First Name"}
             type={"text"}
             name={"firstName"}
@@ -205,7 +205,7 @@ const Personal_Info_Component = (props) => {
             errorMessage={errors.firstName ? errors.firstName.message : null}
           />
 
-          <Input_Component
+          <INPUT_COMPONENT
             title={"Last Name"}
             type={"text"}
             name={"lastName"}
@@ -222,7 +222,7 @@ const Personal_Info_Component = (props) => {
             errorMessage={errors.lastName ? errors.lastName.message : null}
           />
 
-          <Input_Component
+          <INPUT_COMPONENT
             title={"Email"}
             type={"email"}
             name={"email"}
@@ -239,7 +239,7 @@ const Personal_Info_Component = (props) => {
             error={errors.email ? true : false}
             errorMessage={errors.email ? errors.email.message : null}
           />
-          <Input_Component
+          <INPUT_COMPONENT
             title={"Mobile"}
             type={"number"}
             name={"mobile"}
@@ -257,7 +257,7 @@ const Personal_Info_Component = (props) => {
           />
 
         </div>
-        <Input_Component
+        <INPUT_COMPONENT
           title={"Address"}
           type={"text"}
           name={"address"}
@@ -275,7 +275,7 @@ const Personal_Info_Component = (props) => {
           errorMessage={errors.address ? errors.address.message : null}
         />
         <div style={{ marginTop: 20 }} className="personal-info-form-fields">
-          <Input_Component
+          <INPUT_COMPONENT
             title={"City"}
             type={"text"}
             name={"city"}
@@ -292,7 +292,7 @@ const Personal_Info_Component = (props) => {
             error={errors.city ? true : false}
             errorMessage={errors.city ? errors.city.message : null}
           />
-          <Input_Component
+          <INPUT_COMPONENT
             title={"State"}
             type={"text"}
             name={"state"}
@@ -309,7 +309,7 @@ const Personal_Info_Component = (props) => {
             errorMessage={errors.state ? errors.state.message : null}
           />
 
-          <Input_Component
+          <INPUT_COMPONENT
             title={"Postal Code"}
             type={"number"}
             name={"postalCode"}
@@ -327,7 +327,7 @@ const Personal_Info_Component = (props) => {
           />
         </div>
 
-        <Input_Component
+        <INPUT_COMPONENT
           title={"Objective"}
           type={"text"}
           name={"objective"}
