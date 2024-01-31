@@ -7,7 +7,7 @@
 
 - Created a deployment link on https://658d58f86b80c8a49e9a7d2d--monumental-dragon-baffb3.netlify.app/ for easy access to the app
 
-- Provided a demo link on (linkofdemo) for a visual demonstration of the app
+- Provided a demo link on (https://drive.google.com/file/d/16HlmjjWaJbezIUkOf4W7b1m9UH2XQbpu/view?usp=sharing) for a visual demonstration of the app
 
 - Utilized npm installation for easy setup of the Resume_Builder_Project
 
